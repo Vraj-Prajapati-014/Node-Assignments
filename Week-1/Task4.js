@@ -20,10 +20,10 @@ var x = 20; // Allowed: var can be redeclared
 console.log(x); // Outputs: 20
 
 let y = 30;
-let y = 40; // Error: let cannot be redeclared in the same scope
+//let y = 40; // Error: let cannot be redeclared in the same scope
 
 const z = 50;
-const z = 60; // Error: const cannot be redeclared in the same scope
+//const z = 60; // Error: const cannot be redeclared in the same scope
 
 // Example 3: Reassignment
 var a = 100;
