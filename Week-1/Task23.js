@@ -4,7 +4,7 @@ function person(name,age){
 this.name=name;
 this.age=age;
 }
-
+// Here when we use Prototype method it will share same copy with all the instances." Memory Efficient"
 person.prototype.greet=function(){
     console.log(`Name:"${this.name}", Age:${this.age}`);
 }
@@ -14,3 +14,5 @@ const V2=new person("Aditya",20);
 
 V1.greet();
 V2.greet();
+
+console.log(V1.greet===V2.greet);
