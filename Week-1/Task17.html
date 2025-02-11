@@ -1,0 +1,37 @@
+<!-- Create an HTML button with the id "myButton" and an associated JavaScript function. Inside the function, use both a normal function and an arrow function to handle the button click event. Inside each function, use the "this" keyword to log the text content of the button. Add the event listeners to the button to trigger both functions. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-17</title>
+</head>
+<body style="background:#101010; display: flex; justify-content: center; align-items: center; flex-direction: column; height: 60vh; margin: 0;">
+    <button id="myButton" style="height: 80px; width: 120px;">Click Me</button>
+
+    <script>
+
+        const btn=document.getElementById("myButton");
+
+        function Normal(){
+            const p=document.createElement("p");
+            p.textContent=`This is Using normal Function: ${this.textContent}`;
+            p.style.color="white";
+            document.body.appendChild(p);
+        }
+
+        const Arrow=()=>{
+            const p=document.createElement("p");
+            p.textContent=`This is Using Arrow Function: ${this.textContent}`;
+            p.style.color="white";
+            document.body.appendChild(p);
+        }
+
+        btn.addEventListener("click",Normal);
+        btn.addEventListener("click",Arrow);
+        //We can solve this using target.textContent to get the content using arrow function.
+
+    </script>
+</body>
+</html>
