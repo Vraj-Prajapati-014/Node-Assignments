@@ -1,2 +1,0 @@
-require("./v");
-require("./d");
