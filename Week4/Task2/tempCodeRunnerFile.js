@@ -1,0 +1,1 @@
+books.splice(bookIndex,1);

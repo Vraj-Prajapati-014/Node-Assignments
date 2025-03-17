@@ -1,3 +1,6 @@
+// - Before calling any POST, PUT, DELETE APIs that we developed for book management, check that user is only admin/librarian.
+// - You can pass header named `role=’admin’`
+
 const express = require("express");
 // const { json } = require("body-parser");
 const fs = require("fs").promises;
