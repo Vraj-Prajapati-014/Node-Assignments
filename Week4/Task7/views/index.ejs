@@ -1,0 +1,19 @@
+  <!-- Add Task Form -->
+  <%- include('layout.ejs')%>
+  <form action="/add" method="POST" class="flex gap-2 mb-4">
+      <input type="text" name="task" placeholder="New task" required class="border p-2">
+      <button type="submit" class="bg-blue-500 text-white p-2">Add Task</button>
+    </form>
+    
+    <ul class="space-y-2">
+      <% tasks.forEach((task, index) => { %>
+        <li class="flex justify-between items-center">
+          <span><%= task.completed ? 'completed' : 'Pending' %> <%= task.name %></span>
+          <div class="space-x-2">
+            <a href="/complete/<%= index %>" class="text-green-500">Complete</a>
+            <a href="/delete/<%= index %>" class="text-red-500">Delete</a>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+    
